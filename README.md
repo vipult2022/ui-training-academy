@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.hlx.page/
-- Live: https://main--{repo}--{owner}.hlx.live/
+- Preview: https://main--ui-training-academy--vipult2022.hlx.page/
+- Live: https://main--ui-training-academy--vipult2022.hlx.live/
 
 ## Installation
 
