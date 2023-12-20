@@ -1,0 +1,32 @@
+.testimonial.block {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.vt-testimonial__content-wrapper{
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    max-width: var(--container-width);
+}
+
+.vt-testimonial__content h2 {
+    font-size: 29px;
+}
+
+.vt-testimonial__content strong{
+    font-family: var(--font-family-Adobe-Bold);
+    color: var(--text-color-secondary)
+}
+
+.vt-testimonial__bg-image{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    width: 100%;
+}
