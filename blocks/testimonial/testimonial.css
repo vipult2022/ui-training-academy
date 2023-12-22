@@ -5,23 +5,24 @@
     justify-content: center;
 }
 
-.vt-testimonial__content-wrapper{
+.vt-testimonial-content-wrapper{
     z-index: 1;
     display: grid;
     grid-template-columns: 3fr 1fr;
     max-width: var(--container-width);
+    padding: 0 1rem;
 }
 
-.vt-testimonial__content h2 {
+.vt-testimonial-content h2 {
     font-size: 29px;
 }
 
-.vt-testimonial__content strong{
-    font-family: var(--font-family-Adobe-Bold);
+.vt-testimonial-content strong{
+    font-family: var(--font-family-adobe-bold);
     color: var(--text-color-secondary)
 }
 
-.vt-testimonial__bg-image{
+.vt-testimonial-bg-image{
     position: absolute;
     top: 0;
     height: 100%;

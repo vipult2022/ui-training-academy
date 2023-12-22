@@ -8,7 +8,7 @@
  * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
- * 
+ *
  * by-vipult
  */
 
@@ -16,13 +16,17 @@
  * Gets placeholders object
  * @param {string} prefix
  */
-export async function fetchData(fileName = 'default', objParam) {
-    const param = '?' + new URLSearchParams(objParam).toString();
-    try {
-      const response = await fetch(`/data/${fileName}.json${param}`)
-      const result = await response.json()
-      return result
-    } catch (error) {
-      console.error({ error })
-    }
+async function fetchData(fileName = 'default', objParam = {}) {
+  const param = `?${new URLSearchParams(objParam).toString()}`;
+  try {
+    const response = await fetch(`/data/${fileName}.json${param}`);
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.error({ error });
   }
+
+  return '';
+}
+
+export default fetchData;

@@ -16,21 +16,23 @@
   --link-hover-color: #136ff6;
   --background-color: #fff;
   --overlay-background-color: #eee;
+  --dark-background-color: #1F2C40;
   --highlight-background-color: #ccc;
   --text-color: #1F2C40;
   --text-color-light: #fff;
   --text-color-secondary: #EB1000;
+  --text-color-three: #3A829C;
 
   /* fonts */
-  --body-font-family: Adobe Clean;
-  --font-family-Adobe-Bold: Adobe Clean Bold;
+  --body-font-family: adobe clean;
+  --font-family-adobe-bold: adobe clean bold;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   /* body sizes */
-  --body-font-size-m: 2.5em; 
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 1em;
+  --body-font-size-m: 2.5rem; 
+  --body-font-size-s: 1.5rem;
+  --body-font-size-xs: 1rem;
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
@@ -237,7 +239,7 @@ main img {
   width: 100%;
 }
 
-main .section {
+/* main .section {
   padding: 1.313rem 0;
 }
 
@@ -245,7 +247,7 @@ main .section {
   main .section {
     padding: 1.313rem 0;
   }
-}
+} */
 
 @media (width >= 900px) {
   .section > div {

@@ -15,10 +15,11 @@ header nav {
   align-items: center;
   gap: 0 2em;
   margin: auto;
-  max-width: 1700px;
+  max-width: var(--container-width);
+
   /* height: var(--nav-height); */
-  padding: 0 1rem;
   font-family: var(--body-font-family);
+  padding: 0 1rem;
 }
 
 header nav[aria-expanded="true"] {
@@ -31,9 +32,9 @@ header nav[aria-expanded="true"] {
 }
 
 @media (width >= 600px) {
-  header nav {
+  /* header nav {
     padding: 0 2rem;
-  }
+  } */
 }
 
 @media (width >= 900px) {
@@ -150,8 +151,7 @@ header .nav-brand {
 
 header nav .nav-brand img {
   width: 100%;
-  height: auto;
-  padding: 20px 0px;
+  padding: 20px 0;
 }
 
 /* sections */
@@ -173,7 +173,7 @@ header nav .nav-sections ul  {
   list-style: none;
   padding-left: 0;
   font-size: var(--body-font-size-s);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 header nav .nav-sections ul > li {
@@ -185,7 +185,7 @@ header nav .nav-sections ul > li {
   align-items: center;
   gap: 5px;
   cursor: pointer;
-  padding: 1.313em 0 0.188em 0;
+  padding: 1.313em 0 0.188em;
 }
 
 header nav .nav-sections ul > li.active{
@@ -202,7 +202,7 @@ header nav .nav-sections ul > li > ul {
 }
 
 header nav .nav-sections ul > li > ul > li {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @media (width >= 900px) {
@@ -252,7 +252,7 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {

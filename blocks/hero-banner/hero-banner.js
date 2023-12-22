@@ -1,38 +1,17 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
+export default function decorate(block) {
+  const blockName = 'vt-hero-banner';
+  const picture = block.querySelector('picture');
+  const headings = block.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  const contentWrapper = block.querySelector(':scope > div');
+  const content = block.querySelector(':scope > div > div');
 
-export default function decorate(block) { 
-    const parentDiv = document.createElement('div');
-    parentDiv.className = 'hero-main';
-    const contentDiv = document.createElement('div');
-    contentDiv.className = 'banner-content';
+  contentWrapper.classList.add(`${blockName}-content-wrapper`);
+  content.classList.add(`${blockName}-content`);
+  [...headings].forEach((heading) => heading.classList.add(`${blockName}-heading`));
 
-    [...block.children].forEach((row, index) => {
-        const anchor = document.createElement('a');
-        [...row.children].forEach((col, colIndex) => {
-            const picture = col.querySelector('picture');
-            if(picture) parentDiv.appendChild(picture)
-            if(index === 1) {
-                const heading = document.createElement('h1')
-                heading.innerText = col.innerText
-                contentDiv.appendChild(heading)
-            }
-            if(index === 2) {
-                const desc = document.createElement('p')
-                desc.innerText = col.innerText
-                contentDiv.appendChild(desc)
-            }
-            if(index === 3) {
-                if(colIndex === 1){
-                    anchor.href = col.innerText
-                    contentDiv.appendChild(anchor)
-                } else {
-                    anchor.innerText = col.innerText
-                }
-            }
-        });
-    });
-    parentDiv.appendChild(contentDiv)
+  const pictureTag = picture;
+  pictureTag.classList.add(`${blockName}-bg-image`);
+  picture.remove();
 
-    block.textContent = '';
-    block.append(parentDiv);
+  block.prepend(pictureTag);
 }
