@@ -130,6 +130,19 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  const response = await fetch('https://admin.hlx.page/auth/adobe');
+  console.log({ response });
+  const userDetails = await response.json();
+  console.log({ userDetails });
 }
-
+// {
+//   "login_google": "https://admin.hlx.page/auth/google",
+//   "login_google_sa": "https://admin.hlx.page/auth/google?selectAccount=true",
+//   "login_microsoft": "https://admin.hlx.page/auth/microsoft",
+//   "login_microsoft_sa": "https://admin.hlx.page/auth/microsoft?selectAccount=true",
+//   "login_adobe": "https://admin.hlx.page/auth/adobe",
+//   "login_adobe_sa": "https://admin.hlx.page/auth/adobe?selectAccount=true",
+//   "login_adobe-stage": "https://admin.hlx.page/auth/adobe-stg",
+//   "login_adobe-stage_sa": "https://admin.hlx.page/auth/adobe-stg?selectAccount=true"
+// }
 loadPage();
