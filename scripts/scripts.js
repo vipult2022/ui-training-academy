@@ -130,7 +130,7 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  const response = await fetch('https://admin.hlx.page/auth/adobe');
+  const response = await fetch('https://admin.hlx.page/profile');
   console.log({ response });
   const userDetails = await response.json();
   console.log({ userDetails });
